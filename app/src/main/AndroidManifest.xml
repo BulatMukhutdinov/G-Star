@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.firebase.codelab.friendlychat">
+<manifest package="com.google.firebase.codelab.friendlychat"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -8,28 +11,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.google.firebase.codelab.friendlychat.MainActivity">
+        <activity android:name="ru.innopolis.architecture.gstar.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
                 <data
                     android:host="friendlychat.firebase.google.com"
+                    android:scheme="http"
                     android:pathPrefix="/message"
-                    android:scheme="http" />
+                    />
             </intent-filter>
         </activity>
 
-        <activity android:name=".SignInActivity" />
+        <activity android:name="ru.innopolis.architecture.gstar.SignInActivity" />
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="ru.innopolis.architecture.gstar.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -37,12 +40,13 @@
         </service>
 
         <service
-            android:name=".MyFirebaseInstanceIdService"
+            android:name="ru.innopolis.architecture.gstar.MyFirebaseInstanceIdService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
     </application>
 
 </manifest>

@@ -8,23 +8,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context="com.google.firebase.codelab.friendlychat.ru.innopolis.architecture.gstar.MainActivity">
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+    <!--<com.google.android.gms.ads.AdView-->
+    <!--android:id="@+id/adView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--ads:adSize="BANNER"-->
+    <!--ads:adUnitId="@string/banner_ad_unit_id">-->
+    <!--</com.google.android.gms.ads.AdView>-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/messageRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/adView" />
+        android:layout_above="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -39,7 +39,7 @@
             android:id="@+id/addMessageImageView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            ads:srcCompat="@drawable/ic_add_black_24dp" />
+            android:src="@drawable/ic_add_black_24dp" />
 
         <EditText
             android:id="@+id/messageEditText"
@@ -65,5 +65,4 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
-
 </RelativeLayout>
