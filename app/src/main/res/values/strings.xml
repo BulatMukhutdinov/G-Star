@@ -1,16 +1,18 @@
 <resources>
-    <string name="app_name">Friendly Chat</string>
+    <string name="app_name">G-Star chat</string>
     <string name="welcome_msg">Welcome!</string>
     <string name="sign_out">Sign Out</string>
     <string name="contacts_permission_rationale">Access to account information is required to sign in.</string>
     <string name="invite_menu_label">Invite friends</string>
-    <string name="invitation_message">Please join me for a friendly chat</string>
+    <string name="invitation_message">Please join me for a G-Star chat</string>
     <string name="invitation_cta">Call to action</string>
-    <string name="invitation_title">Friendly Chat Invite</string>
-    <string name="sign_in">Sign In</string>
+    <string name="invitation_title">G-Star chat Invite</string>
+    <string name="sign_in">G-Star chat</string>
     <string name="sign_up">Sign Up</string>
     <string name="fresh_config">Fresh Config</string>
     <string name="cause_crash">Cause Crash</string>
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="server_client_id">620165566709-fbe1s87dviv5s1v8b7q7d6nhjfti0fmr.apps.googleusercontent.com</string>
+    <string name="appDescription">This chat is created for the Architecture course of Innopolis University in Spring\'17.
+        This app is basically a group chat, where you can also attach images.</string>
 </resources>
